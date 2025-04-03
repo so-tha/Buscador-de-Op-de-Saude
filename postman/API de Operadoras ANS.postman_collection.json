@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "cd4b319b-c58d-4ad0-a90e-10ee22c12481",
+		"name": "API de Operadoras ANS",
+		"description": "Coleção para testar a API de busca de operadoras da ANS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16839359"
+	},
+	"item": [
+		{
+			"name": "Buscar Operadoras",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/search?query=unimed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "unimed"
+						}
+					]
+				},
+				"description": "Busca operadoras por termo de pesquisa"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por Registro ANS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/search?query=326305",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "326305"
+						}
+					]
+				},
+				"description": "Busca operadora pelo Registro ANS"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por Modalidade",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/search?query=cooperativa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "cooperativa"
+						}
+					]
+				},
+				"description": "Busca operadoras por modalidade"
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por Estado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/search?query=sp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "sp"
+						}
+					]
+				},
+				"description": "Busca operadoras por UF"
+			},
+			"response": []
+		},
+		{
+			"name": "Busca sem resultados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/search?query=xyzabcdef",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "xyzabcdef"
+						}
+					]
+				},
+				"description": "Testa busca sem resultados"
+			},
+			"response": []
+		}
+	]
+}
